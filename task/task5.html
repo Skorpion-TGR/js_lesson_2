@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 5</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 5</h1>
+         <p class="condition">Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин та секунд</p>
+      </div>
+
+      <script class="script">
+         // Завдання 5. Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин та секунд
+
+         const currDate = new Date();
+         let hours = currDate.getHours();
+         let minute = currDate.getMinutes();
+         let second = currDate.getSeconds();
+            if (minute <= 9 ) {
+               minute = "0" + minute;
+            }
+            if (second <= 9) {
+               second = "0" + second;
+            }
+
+
+
+         // document.write(`Від початку доби пройшло <br> ${hrs} годин ${min} хвилин ${sec} секунд`)
+
+         // let time = parseFloat(prompt('Введіть кількість секунд'), 0)
+
+         let time = (hours * 3600) + (minute * 60) + second
+
+         let min = Math.floor(time / 60)
+         let hrs = Math.floor((min % 3600) / 60)
+         let sec = Math.floor(time)
+
+         const nTime = 86400 - time
+
+         let nMin = Math.floor(nTime / 60)
+         let nHrs = Math.floor((nMin % 3600) / 60)
+         let nSec = Math.floor(nTime)
+
+         document.write(`Поточний час ${hours}:${minute}:${second} <br>`)
+         document.write(`Від початку доби минуло <br> ${hrs} годин ${min} хвилин ${sec} секунд <br>`)
+         document.write(`До кінця доби залишилось <br> ${nHrs} годин ${nMin} хвилин ${nSec} секунд`)
+      </script>
+   </div>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 0</title>
+</head>
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 0</h1>
+         <p class="condition">Обчислити значення виразів</p>
+      </div>
+      
+      <script class="script">
+         // Завдання 0. Обчислити занчення виразів 
+
+         let a = parseFloat(prompt('Введіть чило: а', 0))
+         let b = parseFloat(prompt('Введіть чило: b', 0))
+         let c = parseFloat(prompt('Введіть чило: с', 0))
+
+         let s1 = a + 12 + b
+         let s2 = Math.sqrt((a + b)/(2 * a))
+         let s3 = Math.cbrt((a + b) * c)
+         let s4 = Math.sin(a/(-b))
+
+         document.write(`s1 = ${s1}; <br> s2 = ${s2}; <br> s3 = ${s3}; <br> s4 = ${s4};`)
+      </script>
+   </div>
+   
+</body>
+</html>

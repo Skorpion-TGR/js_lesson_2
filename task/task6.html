@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <link rel="stylesheet" href="../css/cstyle.css">
+   <title>Завдання 6</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 6</h1>
+         <p class="condition">З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+      </div>
+
+      <script class="script">
+         // З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки. 
+
+         let quantityFirstProduct = parseFloat(prompt('вкажіть кількість товару - Картопля - кг', 0.000))
+         let priceFirstProduct = parseFloat(prompt('ціна за кг', 25.01))
+
+         let quantitySecondProduct = parseFloat(prompt('вкажіть кількість товару - Борошнр - кг', 0))
+         let priceSecondProduct = parseFloat(prompt('ціна за кг', 40.25))
+
+         let quantityThirdProduct = parseFloat(prompt('вкажіть кількість товару - Сіль - кг', 0))
+         let priceThirdProduct = parseFloat(prompt('ціна за кг', 21.05))
+
+         const PDV = 0.2
+
+         let firstTotal = quantityFirstProduct * priceFirstProduct
+         let secondTotal = quantitySecondProduct * priceSecondProduct
+         let thirdTotal = quantityThirdProduct * priceThirdProduct
+
+         let firstPdv = firstTotal * PDV
+         let secondPdv = secondTotal * PDV
+         let thirdPdv = thirdTotal * PDV
+
+         let totalPrice = firstTotal + secondTotal + thirdTotal
+         let totalPdv = firstPdv + secondPdv + thirdPdv
+
+         document.write(`
+            <table>
+               <tr class = "title">
+                  <th>фіскальний чек</th>
+               </tr>
+               <tr class = "description">
+                  <th>Найменування</th>
+                  <th>Ціна</th>
+                  <th>Кіль-ть</th>
+                  <th>Сума</th>
+               </tr>
+               <tr class = "prices">
+                  <th>Картопля кг</th>
+                  <th>${priceFirstProduct.toFixed(2)}грн/кг x </th>
+                  <th>${quantityFirstProduct.toFixed(3)}кг = </th>
+                  <th>${firstTotal.toFixed(2)}грн.</th>
+                  <th>в т.ч.ПДВ = ${firstPdv.toFixed(2)}грн.</th>
+               </tr>
+               <tr class = "prices">
+                  <th>Борошно кг</th>
+                  <th>${priceSecondProduct.toFixed(2)}грн/кг x </th>
+                  <th>${quantitySecondProduct.toFixed(3)}кг = </th>
+                  <th>${secondTotal.toFixed(2)}грн.</th>
+                  <th>в т.ч.ПДВ = ${secondPdv.toFixed(2)}грн.</th>
+               </tr>
+               <tr class = "prices">
+                  <th>Сіль кг</th>
+                  <th>${priceThirdProduct.toFixed(2)}грн/кг x </th>
+                  <th>${quantityThirdProduct.toFixed(3)}кг = </th>
+                  <th>${thirdTotal.toFixed(2)}грн.</th>
+                  <th>в т.ч.ПДВ = ${thirdPdv.toFixed(2)}грн.</th>
+               </tr>
+               <tr class = "total">
+                  <th>всього</th>
+                  <th>${totalPrice.toFixed(2)}грн.</th>
+                  <th>в т.ч.ПДВ = ${totalPdv.toFixed(2)}грн.</th>
+               </tr>
+            </table>
+         `)
+      </script>
+   </div>
+
+</body>
+
+</html>

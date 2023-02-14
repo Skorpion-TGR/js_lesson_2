@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 2</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 2</h1>
+         <p class="condition">Дано рік народження (1 січня) та поточний рік. Знайти кількість років</p>
+      </div>
+
+      <script class="script">
+         // Завдання 2. Дано рік народження (1 січня) та поточний рік. Знайти кількість років
+
+         let yearOfBirth = parseInt(prompt('Введіть рік народження:'))
+         const currentYear = new Date().getFullYear();
+
+         let numOfYear = currentYear - yearOfBirth
+         document.write(`Кількість років: ${numOfYear}`)
+      </script>
+   </div>
+
+</body>
+
+</html>

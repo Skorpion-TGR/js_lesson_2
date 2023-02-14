@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <link rel="stylesheet" href="../css/table.css">
+   <title>Завдання 1</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 1</h1>
+         <p class="condition">Знайти суму, добуток то частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+      </div>
+      <script class="script">
+         // Завдання 1. Знайти суму, добуток то частку двох дійсних чисел. Результат вивести у формі таблиці
+
+         let a = parseFloat(prompt('Введіть чило: а', 0))
+         let b = parseFloat(prompt('Введіть чило: b', 0))
+
+         let s1 = a + b
+         let s2 = a / b
+         let s3 = a * b
+
+         document.write(`
+            <table>
+               <tr>
+                  <td style="display: block"> Сума: ${s1} </td>
+                  <td style="display: block"> Частка: ${s2} </td>
+                  <td style="display: block"> Добуток: ${s3} </td>
+               </tr>
+            </table>
+         `)
+      </script>
+   </div>
+
+</body>
+
+</html>

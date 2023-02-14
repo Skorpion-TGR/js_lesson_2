@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 3</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 3</h1>
+         <p class="condition">Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості)</p>
+      </div>
+
+      <script class="script">
+         // Завдання 3. Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості)
+
+         let itemPrice = parseFloat(prompt('Введіть ціну товару', 0))
+         let itemQuantity = parseFloat(prompt('Введіть кількість товару', 1))
+         const pdv = 5
+
+         let totalPrice = itemQuantity * itemPrice
+         let itemPdv = (totalPrice / 100) * pdv
+
+         document.write(`Загальна вартість: 
+         ${totalPrice.toFixed(2)} грн. <br> в т.ч. ПДВ ${itemPdv.toFixed(2)} грн.`)
+
+      </script>
+   </div>
+
+</body>
+
+</html>

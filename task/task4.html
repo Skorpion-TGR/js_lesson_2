@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/tstyle.css">
+   <title>Завдання 4</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <a class="back" href="../index.html">на головну</a>
+         <h1 class="title">Завдання 4</h1>
+         <p class="condition">Дано довжину у сантиметрах. Визначити скільки це в метрах та кілометрах</p>
+      </div>
+
+      <script class="script">
+         // Завдання 4. Дано довжину у сантиметрах. Визначити скільки це в метрах та кілометрах
+
+         const mm = 1
+         let sm = parseFloat(prompt('Введіть довжину в сантиметрах'), 0)
+
+         let m = sm / 100
+         let km = sm / 100000
+
+         document.write(`${sm.toFixed(2)} сантиметрів = ${m.toFixed(2)} метрів та ${km.toFixed(3)} кілометрів`)
+
+      </script>
+   </div>
+
+</body>
+
+</html>
